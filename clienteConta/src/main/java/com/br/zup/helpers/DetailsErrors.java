@@ -34,7 +34,5 @@ public class DetailsErrors {
 	public String getOrigin() {
 		return origin;
 	}
-	
-
-	
+		
 }

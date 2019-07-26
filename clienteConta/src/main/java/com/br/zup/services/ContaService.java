@@ -15,14 +15,13 @@ public class ContaService {
 	@Autowired
 	private ContaRepository contaRepository;
 	
-	public String SalvarConta (Cliente cliente, Conta conta) {
-		conta.setCliente(cliente);
-		contaRepository.save(conta);
-		return "Sua conta já está ativa";
-		
-		
-	}
-	public Iterable<Conta> mostrarContas(){
+	public Iterable<Accounts> listAccount(){
 		return contaRepository.findAll();
 	}
+	
+	public void SaveAccount (Cliente cliente, Conta conta) {
+		conta.setCliente(cliente);
+		contaRepository.save(conta);
+	}
+	
 }
